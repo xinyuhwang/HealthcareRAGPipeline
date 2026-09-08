@@ -1,0 +1,23 @@
+# Core - needed to run the experiment
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3          # TF-IDF lexical baseline only
+matplotlib>=3.7            # notebook plots
+
+# Dense retrieval + cross-encoder reranking.
+# Real models, downloaded from the Hugging Face hub on first use
+# (~90 MB for all-MiniLM-L6-v2 + ms-marco-MiniLM-L-6-v2).
+sentence-transformers>=2.6
+torch>=2.0
+
+# ---------------------------------------------------------------------------
+# Optional extras (not installed by default; each degrades gracefully)
+# ---------------------------------------------------------------------------
+# Real Milvus. Milvus Lite runs from a local file with no server:
+#     pip install "pymilvus[milvus_lite]>=2.4.2"
+#     python3 experiment.py --milvus
+#
+# Real LLM generation. Without it, the generation stage falls back to the
+# deterministic extractive baseline and the answer-level metrics still run:
+#     pip install anthropic
+#     export ANTHROPIC_API_KEY=...      # or: ant auth login

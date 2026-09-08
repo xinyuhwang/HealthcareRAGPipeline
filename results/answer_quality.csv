@@ -1,0 +1,3 @@
+configuration,threshold,generator,n_answerable,n_unanswerable,answer_rate,citation_validity,citation_accuracy,groundedness,answered_correctly,abstention_recall,false_abstention_rate,unsupported_answer_rate
+no abstention gate,,extractive-baseline,43,5,1.0,1.0,0.9302325581395349,0.955032706193924,0.9302325581395349,0.0,0.0,1.0
+abstention gate @ -2.179,-2.1790125370025635,extractive-baseline,43,5,0.7674418604651163,1.0,1.0,0.953715867495109,0.7674418604651163,1.0,0.23255813953488372,0.0
